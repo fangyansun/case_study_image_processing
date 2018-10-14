@@ -47,9 +47,7 @@ for (c, _) in cnts:
         digit = model.predict([hist])[0]
         print("I think that number is {}".format(digit))
         
-        cv2.rectangle(image, (x, y), (x + w, y + h),
-                      (0, 255, 0),1)
-        cv2.putText(image, str(digit), (x - 10, y - 10),
-                    cv2.FONT_HERSHEY_SIMPLEX, 1.2, (0, 255, 0), 2)
+        cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0),1)
+        cv2.putText(image, str(digit), (x - 10, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 1.2, (0, 255, 0), 2)
         cv2.imshow("image", image)
         cv2.waitKey(0)
